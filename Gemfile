@@ -10,6 +10,13 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'responders'
 gem 'active_model_serializers', '~> 0.10.0'
+gem "bower-rails", "~> 0.11.0"
+
+gem 'angular-rails-templates'
+
+gem 'devise'
+gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'bootstrap-sass', '~> 3.3.6'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
