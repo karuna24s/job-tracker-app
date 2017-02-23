@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   respond_to :json
 
   def index
-    render 'layouts/application'
+    render 'application/index'
   end
 
   # set token in JS readable session on first HTTP GET request
