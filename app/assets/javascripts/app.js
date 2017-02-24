@@ -5,7 +5,7 @@
 
   angular
     .module('JobTrackerApp', ['templates', 'ui.router', 'Devise', 'ngMessages'])
-    .config(['$stateProvider', '$httpProvider', function($httpProvider) {
+    .config(['$httpProvider', function($httpProvider) {
         // for CSRF errors
         $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
     }]);
