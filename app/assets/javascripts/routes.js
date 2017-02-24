@@ -2,7 +2,7 @@
 
   angular
     .module('JobTrackerApp')
-    .config(['$stateProvider, $urlRouterProvider', function($stateProvider, $urlRouterProvider){
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
       $stateProvider
         .state('home', {
           url: '/',
