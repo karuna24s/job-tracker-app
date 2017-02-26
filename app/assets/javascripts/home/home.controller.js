@@ -4,7 +4,7 @@
 
     function HomeController() {
         var vm = this;
-        vm.name = 'Karuna';
+        vm.name = "Karuna";
     }
 
     angular
