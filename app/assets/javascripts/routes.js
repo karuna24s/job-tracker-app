@@ -9,6 +9,7 @@
           templateUrl: 'home/home.html',
           controller: 'HomeController as vm'
         })
+
         // .state('login', {
         //   url: '/login',
         //   templateUrl: 'views/users/login.html',

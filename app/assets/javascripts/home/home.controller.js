@@ -1,15 +1,13 @@
 (function() {
 
-
-  'use strict'
-
-  angular
-    .module('JobTrackerApp')
-    .controller('HomeController', HomeController)
+  'use strict';
 
     function HomeController() {
-      var vm = this
-
-      vm.name = 'Karuna'
+        var vm = this;
+        vm.name = 'Karuna';
     }
+
+    angular
+      .module('JobTrackerApp')
+      .controller('HomeController', HomeController);
 }())
