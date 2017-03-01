@@ -6,7 +6,7 @@
       $stateProvider
         .state('home', {
           url: '/home',
-          templateUrl: 'home/home.html',
+          templateUrl: 'views/common/home.html',
           controller: 'HomeController as vm'
         })
 
