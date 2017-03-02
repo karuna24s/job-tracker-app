@@ -1,14 +1,26 @@
 <div class="col-lg-8 col-lg-offset-2">
   <h1 class="centered-text">Register</h1>
-  <form ng-if="!currentUser.name" ng-submit="vm.register()">
+  <p class="centered-text">Please provide your name, e-mail address and a password to register.</p>
+  <form name="registerForm" ng-submit="vm.register()">
     <div class="form-group">
-      <input type="name" class="form-control" placeholder="Name" ng-model="vm.newUser.name" autofocus>
+      <input type="name" class="form-control" placeholder="Name" required ng-model="vm.user.name" autofocus>
+      <div ng-messages="registerForm.name.$error">
+        <div ng-message="required">Name is required.</div>
+      </div>
     </div>
     <div class="form-group">
-      <input type="email" class="form-control" placeholder="Email" ng-model="vm.newUser.email" autofocus>
+      <input type="email" class="form-control" placeholder="Email" required ng-model="vm.user.email" autofocus>
+      <div ng-messages="registerForm.email.$error">
+        <div ng-message="required">Email is required.</div>
+        <div ng-message="email">E-mail Address is invalid.</div>
+      </div>
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" placeholder="Password" ng-model="vm.newUser.password">
+      <input type="password" class="form-control" placeholder="Password" required ng-model="vm.user.password" minlength="6">
+      <div ng-messages="registerForm.password.$error">
+        <div ng-message="required">Password is required.</div>
+        <div ng-message="minlength">Your password must contain at least 6 characters.</div>
+      </div>
     </div>
     <input type="submit" class="btn btn-info" value="Sign Up">
   </form>

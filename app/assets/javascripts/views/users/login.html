@@ -1,11 +1,19 @@
 <div class="col-lg-8 col-lg-offset-2">
   <h1 class="centered-text">Login</h1>
-  <form ng-if="!currentUser.name" ng-submit="vm.login()" class="user-form">
+  <form ng-submit="vm.login()" class="loginForm">
     <div class="form-group">
-      <input type="email" class="form-control" placeholder="Email" ng-model="vm.newForm.email" autofocus>
+      <input type="email" class="form-control" placeholder="Email" required ng-model="vm.user.email" autofocus>
+      <div ng-messages="loginForm.email.$error">
+        <div ng-message="required">Email is required.</div>
+        <div ng-message="email">E-mail Address is invalid.</div>
+      </div>
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" placeholder="Password" ng-model="vm.newForm.password">
+      <input type="password" class="form-control" placeholder="Password" required ng-model="vm.user.password" minlength="6">
+      <div ng-messages="loginForm.password.$error">
+        <div ng-message="required">Password is required.</div>
+        <div ng-message="minlength">Your password must contain at least 6 characters.</div>
+      </div>
     </div>
     <input type="submit" class="btn btn-info" value="Log In">
   </form>

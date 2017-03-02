@@ -23,7 +23,7 @@
       })
       .state('jobs.home', {
         url: "home",
-        templateUrl: 'views/common/_home.html',
+        templateUrl: 'views/common/home.html',
         data: {
           requireAuth: false
         }
@@ -69,7 +69,7 @@
       })
       .state('jobs.register', {
         url: "register",
-        templateUrl: 'views/users/_register.html',
+        templateUrl: 'views/users/register.html',
         controller: 'UserController as vm',
         data: {
           requireAuth: false
@@ -77,7 +77,7 @@
       })
       .state('jobs.login', {
         url: "login",
-        templateUrl: 'views/users/_login.html',
+        templateUrl: 'views/users/login.html',
         controller: 'UserController as vm',
         data: {
           requireAuth: false
