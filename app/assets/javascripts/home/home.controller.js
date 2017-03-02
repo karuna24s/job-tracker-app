@@ -2,6 +2,11 @@
 
    'use strict';
 
+   angular
+       .module('JobTrackerApp')
+       .controller('HomeController', HomeController)
+
+
    function HomeController() {
 
        var vm = this;
@@ -19,8 +24,5 @@
 
    };
 
-   angular
-       .module('JobTrackerApp')
-       .controller('HomeController', HomeController);
 
  }());
