@@ -1,0 +1,20 @@
+<div class="col-lg-8 col-lg-offset-2">
+  <h1 class="centered-text">Register</h1>
+  <form ng-if="!currentUser.name" ng-submit="vm.register()">
+    <div class="form-group">
+      <input type="name" class="form-control" placeholder="Name" ng-model="vm.newUser.name" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" placeholder="Email" ng-model="vm.newUser.email" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="Password" ng-model="vm.newUser.password">
+    </div>
+    <input type="submit" class="btn btn-info" value="Sign Up">
+  </form>
+  <br>
+
+  <div class="panel-footer">
+    Already signed up? <a ui-sref="login">Log in here</a>.
+  </div>
+</div>

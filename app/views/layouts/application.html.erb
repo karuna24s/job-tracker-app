@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="JobTrackerApp">
   <head>
     <title>JobTrackerApp</title>
     <%= csrf_meta_tags %>
@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body ng-app="JobTrackerApp">
+  <body>
     <%= yield %>
   </body>
 </html>

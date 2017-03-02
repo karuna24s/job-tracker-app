@@ -2,12 +2,13 @@
 
   'use strict';
 
-    function HomeController() {
-        var vm = this;
-        vm.name = "Karuna";
-    }
-
     angular
       .module('JobTrackerApp')
       .controller('HomeController', HomeController);
+
+      function HomeController(Auth, $rootScope, $state, $scope) {
+          var vm = this;
+          vm.logout = Auth.logout;
+      }
+
 }())
