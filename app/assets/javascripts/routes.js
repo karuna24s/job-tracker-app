@@ -30,7 +30,7 @@
       })
       .state('jobs.list', {
         url: "list",
-        templateUrl: 'views/jobs/_index.html',
+        templateUrl: 'views/jobs/index.html',
         controller: 'JobController as vm',
         data: {
           requireAuth: true
@@ -38,14 +38,14 @@
       })
       .state('jobs.show', {
         url: "view/:id",
-        templateUrl: 'views/jobs/_show.html',
+        templateUrl: 'views/jobs/show.html',
         data: {
           requireAuth: true
         }
       })
       .state('jobs.show.checklist', {
         url: "/checklists",
-        templateUrl: 'views/checklists/_show.html',
+        templateUrl: 'views/checklists/show.html',
         controller: 'ChecklistController as vm',
         data: {
           requireAuth: true
@@ -53,7 +53,7 @@
       })
       .state('jobs.new', {
         url: "new",
-        templateUrl: 'views/jobs/_new.html',
+        templateUrl: 'views/jobs/new.html',
         controller: 'JobController as vm',
         data: {
           requireAuth: true
@@ -61,7 +61,7 @@
       })
       .state('jobs.edit', {
         url: "view/:id/edit",
-        templateUrl: 'views/jobs/_edit.html',
+        templateUrl: 'views/jobs/edit.html',
         controller: 'JobController as vm',
         data: {
           requireAuth: true
